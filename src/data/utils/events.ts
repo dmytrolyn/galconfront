@@ -1,0 +1,10 @@
+export enum ServerEvents {
+  GAME_CREATED = "GAME_CREATED",
+  PLAYER_JOINED = "PLAYER_JOINED",
+}
+
+export enum ClientEvents {
+  GET_LOBBY_LIST = "GET_LOBBY_LIST",
+  CREATE_NEW_GAME = "CREATE_NEW_GAME",
+  JOIN_GAME = "JOIN_GAME",
+}

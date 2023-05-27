@@ -1,0 +1,50 @@
+@import "../../styles/core.scss";
+
+.wrap {
+  @include full-flex-centered;
+}
+
+.lobby {
+  max-width: 480px;
+  width: 100%;
+
+  min-height: 400px;
+
+  padding: 20px 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @include glass-effect(4px);
+
+  &Title {
+    @include text-dark-shadowed;
+  }
+
+  &Button {
+    width: 200px;
+    height: 40px;
+
+    @include font-main-medium(20px);
+    @include button-main;
+  }
+
+  &List {
+    width: calc(100% - 60px);
+
+    padding: 15px 30px;
+
+    &Item {
+      &Text {
+        display: flex;
+        align-items: center;
+
+        &Primary {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}

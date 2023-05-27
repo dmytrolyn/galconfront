@@ -1,0 +1,62 @@
+@import "../../styles/core";
+
+.wrap {
+  @include full-flex-centered;
+}
+
+.form {
+  width: 600px;
+  height: 300px;
+
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include glass-effect;
+
+  &Title {
+    text-align: center;
+
+    @include text-dark-shadowed;
+    @include font-main-bold(30px);
+  }
+
+  &Group {
+    margin: 15px 0;
+
+    &Error {
+      text-align: center;
+      color: rgb(225, 225, 225);
+
+      margin-top: 4px;
+    }
+  }
+
+  &Input {
+    width: 500px;
+    height: 50px;
+
+    padding: 0 20px;
+
+    @include font-main-regular(30px);
+    @include input-main;
+
+    &Error {
+      box-shadow: $input-error-shadow;
+    }
+  }
+
+  &Enter {
+    width: 250px;
+    height: 50px;
+
+    @include button-main;
+    @include font-main-regular(22px);
+
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+}

@@ -1,0 +1,50 @@
+@import "../../../styles/core.scss";
+
+.modal {
+  width: 420px;
+}
+
+.form {
+  width: 100%;
+
+  padding: 20px 0;
+
+  @include flex-centered;
+  flex-direction: column;
+
+  &Group {
+    margin: 15px 0;
+  }
+
+  &Buttons {
+    width: calc(100% - 80px);
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 40px;
+
+    &Item {
+      width: 150px;
+      height: 40px;
+
+      @include button-secondary;
+      @include font-main-medium(20px);
+    }
+  }
+
+  &Title {
+    @include font-main-medium(26px);
+    color: rgb(230, 230, 255);
+  }
+
+  &Input {
+    width: 334px;
+    height: 40px;
+
+    @include input-main;
+    @include font-main-regular(20px);
+
+    background: rgba(230, 230, 255, 0.8);
+  }
+}

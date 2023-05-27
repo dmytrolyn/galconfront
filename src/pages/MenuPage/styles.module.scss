@@ -1,0 +1,75 @@
+@import "../../styles/core";
+
+.wrap {
+  @include full-flex-centered;
+}
+
+.color {
+  margin-left: 8px;
+}
+
+.menu {
+  max-width: 480px;
+  width: 100%;
+
+  min-height: 600px;
+
+  display: grid;
+  grid-template-areas:
+    "a a"
+    "b b"
+    "b b"
+    "c c";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px auto auto 100px;
+
+  @include glass-effect(4px);
+
+  &Head {
+    grid-area: a;
+
+    @include full-flex-centered;
+    flex-direction: column;
+  }
+
+  &Title {
+    @include text-dark-shadowed(2px);
+    @include font-main-bold(26px);
+  }
+
+  &SubTitle {
+    display: flex;
+    align-items: center;
+
+    @include text-dark-shadowed(2px);
+    @include font-main-bold(18px);
+
+    &Text {
+      margin-right: 8px;
+    }
+  }
+
+  &List {
+    grid-area: b;
+
+    padding: 0 30px;
+  }
+
+  &Actions {
+    grid-area: c;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+
+    &Button {
+      width: 200px;
+      height: 50px;
+
+      @include button-main;
+      @include font-main-medium(16px);
+      text-transform: uppercase;
+    }
+  }
+}

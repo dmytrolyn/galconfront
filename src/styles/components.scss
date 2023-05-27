@@ -1,0 +1,35 @@
+@mixin button-main {
+  color: rgb(225, 225, 225);
+
+  background-color: rgba(0, 0, 26, 0.9);
+  box-shadow: 0 0 1px rgb(230, 230, 255);
+
+  border-radius: 10px;
+  border: 0;
+
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: rgba(0, 0, 26, 0.7);
+    box-shadow: 0 0 3px rgb(230, 230, 255);
+  }
+}
+
+@mixin button-secondary {
+  background-color: rgba(230, 230, 255, 0.8);
+
+  border-radius: 6px;
+  border: 0;
+
+  color: rgba(0, 0, 26, 0.9);
+}
+
+@mixin input-main {
+  text-shadow: 0 0 3px rgb(230, 230, 255);
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.4);
+
+  border-radius: 10px;
+  border: 0;
+}
